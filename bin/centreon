@@ -95,6 +95,7 @@ $dbConfig['host'] = $conf_centreon['hostCentreon'];
 $dbConfig['username'] = $conf_centreon['user'];
 $dbConfig['password'] = $conf_centreon['password'];
 $dbConfig['dbname'] = $conf_centreon['db'];
+$dbConfig['charset'] = isset($conf_centreon['charset']) ? $conf_centreon['charset'] : 'utf8';
 if (isset($conf_centreon['port'])) {
     $dbConfig['port'] = $conf_centreon['port']; 
 } elseif ($p = strstr($dbConfig['host'], ':')) {
